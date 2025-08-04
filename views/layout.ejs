@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title><%= title %></title>
-  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/style.css">
+
+
 </head>
 <body>
   <header>
     <h1>📝 My Blog</h1>
     <nav>
       <a href="/" class="<%= page === 'Home' ? 'active' : '' %>">Home</a>
-      <a href="/about" class="<%= page === 'About' ? 'active' : '' %>"></a>
-      <a href="/blog" class="<%= page === 'Blog' ? 'active' : '' %>"></a>
+      <a href="/about" class="<%= page === 'About' ? 'active' : '' %>">About</a>
+      <a href="/blog" class="<%= page === 'Blog' ? 'active' : '' %>">Blog</a>
     </nav>
    </header>
 

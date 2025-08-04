@@ -1,0 +1,11 @@
+<section>
+  <h2>Latest Blog Posts</h2>
+  <ul>
+    <% blogs.forEach(blog => { %>
+      <li>
+        <h3><%= blog.title %></h3>
+        <p><%= blog.desc %></p>
+      </li>
+    <% }) %>
+  </ul>
+</section>

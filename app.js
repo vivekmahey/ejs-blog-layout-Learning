@@ -1,9 +1,9 @@
-const express=require(express);
+const express=require("express");
 const app=express();
-const port=3001
-const expresssLayouts=require(express-ejs-layouts);
+const port=3001;
+const expresssLayouts=require("express-ejs-layouts");
 
-app.set("express view engine","ejs");
+app.set("view engine","ejs");
 app.use(express.static("public"));
 
 // Use express-ejs-layouts
@@ -20,11 +20,25 @@ app.get("/about", (req, res) => {
 
 app.get("/blog", (req, res) => {
   const blogs = [
-    { title: "Mastering EJS", desc: "Learn EJS from scratch in this beginner-friendly guide." },
-    { title: "Node.js Tips", desc: "Level up your backend with these Node.js techniques." },
-    { title: "Frontend Tools", desc: "Best tools and libraries to boost frontend productivity." }
+    {
+      title: "Mastering EJS Layouts",
+      desc: "Learn how to create reusable templates in your Node.js projects using EJS and layout files."
+    },
+    {
+      title: "Why You Should Learn Node.js",
+      desc: "From building APIs to real-time apps, discover why Node.js is a must-have in your dev toolkit."
+    },
+    {
+      title: "Frontend Tools for 2025",
+      desc: "Explore the latest and greatest frontend tools that every modern developer should know."
+    }
   ];
-  res.render("blog", { title: "Blog - My Blog", page: "Blog", blogs });
+
+  res.render("blog", {
+    title: "Blog - My Dev Blog",
+    page: "Blog",
+    blogs
+  });
 });
 
 app.listen(port, () => {
