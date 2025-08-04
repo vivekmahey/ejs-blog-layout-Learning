@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📝 My Blog</h1>
+    <nav>
+      <a href="/" class="<%= page === 'Home' ? 'active' : '' %>">Home</a>
+      <a href="/about" class="<%= page === 'About' ? 'active' : '' %>"></a>
+      <a href="/blog" class="<%= page === 'Blog' ? 'active' : '' %>"></a>
+    </nav>
+   </header>
+
+<main>
+    <%- body %>
+</main>
+
+<footer>
+    <p>© 2025 My Blog. All rights reserved, Developed By Vivek Mahey</p>
+  </footer>
+</body>
+</html>
